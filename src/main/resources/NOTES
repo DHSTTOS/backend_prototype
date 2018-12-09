@@ -1,0 +1,17 @@
+#ON MONGO:
+Start mongo // this is platform dependent so check if there's a way to do it on all platofroms
+sudo service mongod start
+ - stop
+ - restart
+
+
+
+#topic manipulation
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+
+#starting zookeper
+sudo bin/zookeeper-server-start.sh confizookeeper.properties
+
+#starting kafka
+sudo bin/kafka-server-start.sh config/server.properties
